@@ -1,0 +1,4 @@
+com\mx\sharkit\loginweb\Main.class
+com\mx\sharkit\loginweb\services\LoginService.class
+com\mx\sharkit\loginweb\beans\LoginBean.class
+com\mx\sharkit\loginweb\hibernate\data\Usuario.class

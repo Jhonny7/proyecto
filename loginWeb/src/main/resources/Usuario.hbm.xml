@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 26/07/2017 08:16:23 AM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="com.mx.sharkit.loginweb.hibernate.data.Usuario" table="usuario">
+        <id name="id" type="java.lang.Integer">
+            <column name="id" />
+            <generator class="identity" />
+        </id>
+        <property name="nombre" type="string">
+            <column name="nombre" length="45" />
+        </property>
+        <property name="apellidoPaterno" type="string">
+            <column name="apellido_paterno" length="45" />
+        </property>
+        <property name="apellidoMaterno" type="string">
+            <column name="apellido_materno" length="45" />
+        </property>
+        <property name="username" type="string">
+            <column name="username" length="45" />
+        </property>
+        <property name="password" type="string">
+            <column name="password" length="45" />
+        </property>
+    </class>
+    <query name="Usuario.control">
+		<![CDATA[SELECT u FROM Usuario u WHERE u.username = :username AND u.password = :password]]>
+	</query>
+</hibernate-mapping>
